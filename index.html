@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DeceirMovies</title>
+    <title>Movie App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
-<div class="container-fluid">
+<div id="loader" class="center"><h6>Loading</h6></div>
+<div class="headbox">
+    <h1 id="headertext" style="color: white">ATCFlicks</h1>
+</div>
+<!--<button type="button" class="deleteBtn">This is a button</button>-->
+
+<div class="container-fluid" id="topCont">
     <div class="row justify-content-center">
         <div id="loadingArea">
             <div class="spinner-border text-light" role="status">
@@ -17,6 +23,69 @@
         </div>
     </div>
 
+    <button id="refreshDB" type="button">Refresh Database</button>
+    <br/>
+
+    <div id="movieCards">
+    </div>
+
+
+</div>
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center" id="addMovieForm">
+
+        <form>
+            <h3>Add Movie to Database</h3>
+            <label for="movieTitle">Movie Title</label>
+            <input id="movieTitle" type="text" placeholder="Title of Movie"> <br/>
+            <label for="movieYear">Movie Year</label>
+            <input id="movieYear" placeholder="2020">
+            <label for="movieRating">Movie Rating</label>
+            <select name="rating" id="movieRating">
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+
+            </select> <br/>
+            <label for="moviePoster">Movie Poster</label>
+            <input id="moviePoster" placeholder="image link"> <br/>
+            <label for="moviePlot">Movie Plot</label> <br/>
+            <textarea id="moviePlot" rows="5" cols="50" placeholder="Gist of the movie."></textarea>
+            <button id="submissionBtn" type="button">Submit Entry</button>
+        </form>
+    </div>
+    <div class="row justify-content-center">
+
+        <form>
+            <h3>Edit Movie</h3>
+            <div id="moviesToEdit">
+                <select name="editableMovies">
+                    <option value="">Movie Title</option>
+                </select>
+            </div>
+            <label for="movieYearEdit">Movie Year</label>
+            <input id="movieYearEdit" autocomplete="off">
+            <label for="movieRatingEdit">Movie Rating</label>
+            <select name="rating" id="movieRatingEdit" autocomplete="off">
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+
+            </select> <br/>
+            <label for="moviePosterEdit" autocomplete="off">Movie Poster</label>
+            <input id="moviePosterEdit" autocomplete="off"> <br/>
+            <textarea id="moviePlotEdit" rows="5" cols="50" autocomplete="off"></textarea> <br/>
+            <button id="editBtn" type="button">Submit Edit</button>
+
+        </form>
+
+    </div>
 </div>
 
 
@@ -30,5 +99,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script src="js/movies.js"></script>
+
 </body>
 </html>

@@ -1,8 +1,102 @@
-* {
-    background: #4c4a4a;
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    /*animation: spin 1s linear infinite;*/
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#headertext {
+    margin-left: 7.5em;
+}
+
+body {
+    background-color: #cb6262;
+}
+
+.headbox {
+    background: #6f2f2f;
+    width: 100vw;
+    border: solid white 2px;
     color: white;
+    user-select: none;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h4 {
+    float: right;
+}
+
+/** {*/
+
+/*    margin: auto;*/
+/*}*/
+
+#topCont {
+    margin-left: 10em;
 }
 
 #loadingArea {
     margin-top: 50px;
+    visibility: hidden;
+}
+
+.card {
+    background: #cb6262;
+    border: none;
+    float: left;
+    margin-left: 3em;
+}
+
+#movieCards {
+    margin-left: 50px;
+}
+
+hr {
+    color: white;
+}
+
+form {
+    clear: left;
+}
+button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+img {
+    width: 300px;
+    height: 444px;
+}
+
+#hidden {
+    visibility: hidden;
+}
+
+.deleteBtn {
 }
